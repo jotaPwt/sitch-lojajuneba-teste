@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #111415;
+    color: #e1e3e4;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display, .font-headline {
+    font-family: 'Oswald', sans-serif;
+  }
+}
+
+.font-headline {
+  font-family: 'Oswald', sans-serif;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Court line divider horizontal */
+.court-line-divider {
+  position: relative;
+  height: 1px;
+  background-color: #27272A;
+  width: 100%;
+}
+.court-line-divider::before, .court-line-divider::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  width: 1px;
+  height: 9px;
+  background-color: #27272A;
+}
+.court-line-divider::before { left: 0; }
+.court-line-divider::after { right: 0; }
+
+/* Court line vertical */
+.court-line-vertical {
+  border-left: 1px solid #27272A;
+  position: relative;
+}
+.court-line-vertical::before, .court-line-vertical::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  width: 7px;
+  height: 1px;
+  background-color: #27272A;
+}
+.court-line-vertical::before { top: 0; }
+.court-line-vertical::after { bottom: 0; }
+
+.court-line-bottom {
+  border-bottom: 1px solid #27272A;
+}
+
+/* Pebbled texture overlay */
+.pebbled-texture {
+  position: relative;
+}
+.pebbled-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.transition-athletic {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.input-baseline {
+  border: none;
+  border-bottom: 1px solid #4c4546;
+  background-color: transparent;
+  transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-baseline:focus {
+  outline: none;
+  border-bottom-color: #ec6a06;
+  box-shadow: 0 1px 0 0 #ec6a06;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.material-symbols-outlined.fill-icon {
+  font-variation-settings: 'FILL' 1;
+}
+

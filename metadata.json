@@ -1,0 +1,6 @@
+{
+  "name": "Loja do Juneba",
+  "description": "E-commerce de basquete, drops exclusivos e painel administrativo",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
